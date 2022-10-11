@@ -22,7 +22,10 @@ jobs:
           restore-keys: |
             ${{ runner.OS }}-npm-cache
       - name: Install Dependencies
-        run: npm install -g hexo-cli
+        run: |
+          npm install -g hexo-cli
+          git config --global user.email "ahd.benkheder@gmail.com"
+          git config --global user.name "Ahdbk
       - name: Install hexo git
         run: npm install hexo-deployer-git --save
       - name: Deploy
