@@ -22,6 +22,8 @@ jobs:
           restore-keys: |
             ${{ runner.OS }}-npm-cache
       - name: Install Dependencies
+        run: npm install -g hexo-cli
+      - name: Install hexo git
         run: npm install hexo-deployer-git --save
       - name: Deploy
         run: hexo g & hexo d
