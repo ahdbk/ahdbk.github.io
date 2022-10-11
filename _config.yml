@@ -104,5 +104,7 @@ theme: Quiet
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
-deploy:
-  type: ''
+  deploy:
+    type: git
+    repo: https://github.com/ahdbk/ahdbk.github.io
+    branch: main
