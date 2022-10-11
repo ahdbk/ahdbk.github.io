@@ -107,4 +107,4 @@ theme: Quiet
 deploy:
   type: git
   repo: https://github.com/ahdbk/ahdbk.github.io
-  branch: main
+  branch: master
