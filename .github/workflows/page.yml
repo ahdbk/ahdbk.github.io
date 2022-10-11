@@ -22,9 +22,11 @@ jobs:
           restore-keys: |
             ${{ runner.OS }}-npm-cache
       - name: Install Dependencies
-        run: |
-          npm install -g hexo-cli
-      - name: Install hexo git
-        run: npm install hexo-deployer-git --save
+        run: npm install
+      - name: Build
+        run: npm run build
       - name: Deploy
-        run: hexo g & hexo d
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
